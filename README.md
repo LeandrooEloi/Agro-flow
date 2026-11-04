@@ -12,6 +12,11 @@ Abra http://localhost:8080. Usuário `admin`; a senha é gerada no log do contai
 
 Ative a DAG `agro_irrigacao` (roda a cada 2 min) ou use **Trigger DAG w/ config**.
 
+## Painel visual
+O `docker compose up` também sobe um painel em http://localhost:8081 (nginx servindo `dashboard/index.html`).
+Ele lê `data/historico_irrigacao.csv` a cada 3 s e mostra os 4 sensores, a decisão atual
+(irrigando / aguardando chuva / solo adequado) e o histórico. Deixe o Airflow e o painel lado a lado na demo.
+
 ## Roteiro de demo
 Trigger com o parâmetro `cenario`:
 | cenário  | resultado esperado |
